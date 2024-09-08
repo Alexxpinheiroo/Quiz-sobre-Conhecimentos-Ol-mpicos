@@ -1,0 +1,189 @@
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Estiliza o corpo da página */
+body {
+    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
+    background-color: #f0f0f0; /* Cor de fundo da página */
+    background-image: url('gold-money-silver-Olympic-Games-Medals-bronze-590569-wallhere.com.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Preenche a altura total da viewport */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+/* Estiliza o cabeçalho */
+header {
+    background-color: #ffd700; /* Dourado sólido */
+    color: #222831; /* Cor do texto */
+    padding: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra mais forte para contraste */
+    position: fixed;
+    text-align: center;
+    border-bottom: 5px solid #ffdf00; /* Linha dourada na parte inferior */
+    z-index: 2; /* Garante que o cabeçalho fique acima do conteúdo */
+}
+
+/* Estiliza o título do cabeçalho */
+header h1 {
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: #222831; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    letter-spacing: 0.4rem; /* Espaçamento entre letras */
+    font-weight: 700; /* Peso da fonte aumentado para um pouco mais grosso */
+}
+
+/* Estiliza o rodapé */
+footer {
+    background-color: #ffd700; /* Dourado sólido */
+    color: #222831; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Sombra mais forte para contraste */
+    z-index: 2; /* Garante que o rodapé fique acima do conteúdo */
+}
+
+/* Estiliza o texto do rodapé */
+footer p {
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: 300; /* Peso da fonte */
+}
+
+/* Estiliza a seção do quiz */
+#quiz-container {
+    margin-top: 100px; /* Ajusta o espaçamento para compensar o cabeçalho fixo */
+    margin-bottom: 60px; /* Ajusta o espaçamento para compensar o rodapé fixo */
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border: 3px solid #ffd700;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estiliza o botão de iniciar quiz e reiniciar */
+#start-btn, #restart-btn {
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.5rem; /* Borda arredondada */
+    background-color: #ffd700; /* Dourado */
+    color: #000; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave para hover */
+}
+
+/* Efeito hover nos botões */
+#start-btn:hover, #restart-btn:hover {
+    background-color: #ffdf00; /* Dourado mais claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra mais intensa */
+}
+
+/* Estiliza a área de pergunta */
+#quiz-question h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Estiliza as opções */
+.options {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    padding: 10px;
+    background-color: #fdfd96; /* Amarelo claro */
+    border: 2px solid #ffd700; /* Borda dourada */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efeito hover nas opções */
+.option:hover {
+    background-color: #ffd700; /* Dourado */
+    color: #fff;
+}
+
+/* Estiliza a área de feedback */
+#feedback {
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Estiliza a tela final */
+#quiz-end h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+#quiz-end p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Tamanho da fonte em telas menores */
+        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
+    }
+
+    #quiz-container {
+        padding: 1rem;
+    }
+
+    #start-btn, #restart-btn {
+        font-size: 0.9rem;
+    }
+
+    .option {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
+        letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
+    }
+
+    #quiz-container {
+        width: 90%;
+    }
+
+    #start-btn, #restart-btn {
+        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
+        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
+    }
+
+    .option {
+        font-size: 0.9rem;
+    }
+}
